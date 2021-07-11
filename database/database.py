@@ -55,3 +55,4 @@ async def get_data(id):
     finally:
         SESSION.close()
 
+
