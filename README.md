@@ -33,7 +33,7 @@ This is a telegram bot helps you to store your files and get the share able perm
 
 Press the button Deploy to heroku and give the values for the config vars. 👇
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)]
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/M4SK3R1N/TG-File-Sharing)
 
 ## Tools Used 🧰
 
