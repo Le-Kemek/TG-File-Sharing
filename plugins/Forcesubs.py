@@ -4,6 +4,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import UserNotParticipant
 from database.database import *
 from config import *
+from plugins.commands import decode
 
 @Client.on_message(filters.private & filters.incoming)
 async def forcesub(c, m):
@@ -17,8 +18,9 @@ async def forcesub(c, m):
         except UserNotParticipant:
             buttons = [[InlineKeyboardButton(text='Updates Channel 🔖', url=f"https://t.me/{UPDATE_CHANNEL}")]]
             if m.text:
-                if (len(m.text.split(' ')) > 1) & ('start' in m.text):
-                    chat_id, msg_id = m.text.split(' ')[1].split('_')
+                if (len(m.text.split()) > 1) & ('start' in m.text):
+                    decoded_data = await decode(m.text.split()[1])
+                    chat_id, msg_id = decoded_data.split('_')
                     buttons.append([InlineKeyboardButton('🔄 Refresh', callback_data=f'refresh+{chat_id}+{msg_id}')])
             await m.reply_text(
                 f"Hey {m.from_user.mention(style='md')} Kamu harus **BERGABUNG** kedalam Channel untuk menggunakanku😉\n\n"
@@ -47,7 +49,7 @@ async def refresh_cb(c, m):
                    pass
                return
         except UserNotParticipant:
-            await m.answer('You are not yet joined our channel. First join and then press refresh button 🤤', show_alert=True)
+            await m.answer('Kamu masih belum join ke channel kami. Join terlebih dahulu kemudian pencet Refresh 🥰', show_alert=True)
             return
         except Exception as e:
             print(e)
