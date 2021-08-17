@@ -63,18 +63,9 @@ async def about_cb(c, m):
     about_text = f"""--**My Details:**--
 
 🤖 𝐌𝐲 𝐍𝐚𝐦𝐞: {bot.mention(style='md')}
-    
-📝 𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞: [Python 3](https://www.python.org/)
-
-🧰 𝐅𝐫𝐚𝐦𝐞𝐰𝐨𝐫𝐤: [Pyrogram](https://github.com/pyrogram/pyrogram)
-
 👨‍💻 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫: {owner.mention(style='md')}
-
-📢 𝐂𝐡𝐚𝐧𝐧𝐞𝐥: [BOT UPDATES](https://t.me/ViralTwitterHot)
-
-👥 𝐆𝐫𝐨𝐮𝐩: [BOT SUPPORT](https://t.me/joinchat/Kf2nVF-Zy-8zMjc9)
-
-🌐 𝐒𝐨𝐮𝐫𝐜𝐞 𝐂𝐨𝐝𝐞: [Press Me 🥰](https://github.com/M4SK3R1N/TG-File-Sharing)
+📢 𝐂𝐡𝐚𝐧𝐧𝐞𝐥: [BOT UPDATES](https://t.me/TiktokViral18Plus_Pemersatu)
+👥 𝐆𝐫𝐨𝐮𝐩: [COMING SOON]
 """
 
     # creating buttons
